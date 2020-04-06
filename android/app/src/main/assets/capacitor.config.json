@@ -1,0 +1,8 @@
+{
+  "appId": "mi.music.com",
+  "appName": "mi-music",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "cordova": {}
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">mi-music</string>
+    <string name="title_activity_main">mi-music</string>
+    <string name="package_name">mi.music.com</string>
+    <string name="custom_url_scheme">mi.music.com</string>
+</resources>
