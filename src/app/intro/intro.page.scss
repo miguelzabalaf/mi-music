@@ -1,0 +1,116 @@
+ion-content ion-toolbar {
+  --background: translucent;
+}
+
+.logo {
+  width: 35px;
+}
+
+
+
+@mixin presentation {
+  &-close {
+    text-align: end;
+    .close {
+      right: 0;
+      font-size: 35px;
+    }
+  }
+  img {
+    width: 75px;
+  }
+  display: block;
+  padding: 20px;
+  position: relative;
+  &-info {
+    margin-top: 50px;
+    & > * {
+      line-height: 10px;
+    }
+    h1 {
+      text-transform: uppercase;
+      font-weight: 900;
+      color: var(--ion-color-primary);
+      transition: all 0.5s;
+    }
+    p{
+      color: var(--ion-color-secondary);
+      font-weight: 300;
+    }
+  }
+  ion-icon {
+    font-size: 50px;
+    color: var(--ion-color-primary);
+    margin-bottom: 50px;
+    margin-left:auto;
+    margin-right:auto;
+    left:0;
+    right:0;  
+  }
+  &-img {
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    img {
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+ion-slides {
+  height: 95vh;
+  .slide1 {
+    @include presentation();
+  }
+  .slide2 {
+    @include presentation();
+  }
+
+  .slide3 {
+    @include presentation();
+  }
+}
+
+// Meadia queries
+
+@media screen and (min-width: 768px) {
+  .slide1, .slide2, .slide3 {
+    &-info {
+      h1 {
+        margin-top: 100px;
+        font-size: 35px;
+      }
+    }
+    ion-icon {
+      margin-top: 100px;
+      font-size: 50px;
+      margin: auto;
+    }
+    &-img {
+      width: 100%;
+      height: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .slide1, .slide2, .slide3 {
+
+    &-info {
+      h1 {
+      font-size: 20px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+    &-img {
+      margin-top: 100px;
+    }
+  }
+}

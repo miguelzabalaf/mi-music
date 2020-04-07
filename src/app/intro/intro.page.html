@@ -1,0 +1,26 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>intro</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content padding>
+  <ion-slides pager="true" [options]="slideOpts" >
+
+    <ion-slide *ngFor="let slide of slides" class="{{slide.name}}">
+      <div class="{{slide.name}}-close">
+        <ion-icon class="close" name="close-outline" (click)="finishIntro()"></ion-icon>
+      </div>
+      <img src="assets/img/logo-black.svg" alt="{{slide.atl}}">
+      <div class="{{slide.name}}-info">
+        <h1>{{slide.title}}</h1>
+        <p>{{slide.subtitle}}</p>
+      </div>
+      <ion-icon name="{{slide.icon}}"></ion-icon>
+      <div class="{{slide.name}}-img">
+        <img src="assets/img/{{slide.name}}-img.svg" alt="">
+      </div>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>
